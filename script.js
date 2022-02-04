@@ -1,18 +1,20 @@
-var buttonEl = document.getElementById("search-btn");
+const searchFormEl = document.getElementById("search-form");
 
-buttonEl.addEventListener("click", function() {
-    window.location = "./search-results.html";
-    getApi();
-})
+handleSearchSubmit = e => {
+    e.preventDefault();
 
-function getApi() {
-var requestUrl = 'https://www.loc.gov/film-and-videos/?q=dog&fo=json'
-#category.val() + '/?q='+ #search-input.val().toLowerCase()+'&fo=json'
-fetch(requestUrl)
-.then(function (response) {
-    return response.json();
-})
-.then(function (data) {
-    console.log(data);
-})
+    let searchInputVal = document.getElementById("search-input").value;
+    let formControlVal = document.getElementById("formControl").value;
+
+    if  (!searchInputVal) {
+        alert("Type something in the search bar!");
+        return;
+    }
+
+    let queryString = `./search-results.html?q=${searchInputVal}&format=${formControlVal}`;
+    
+    window.location  = (queryString);
 }
+
+searchFormEl.addEventListener("submit", handleSearchSubmit);
+

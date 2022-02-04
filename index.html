@@ -16,9 +16,9 @@
       <div class="card">
         <div class="card-body d-block">
             <h1>Library of Congress Search Engine</h1>
-          <form>
+          <form id="search-form">
             <div class="form-group">
-              <label for="exampleFormControlInput1">Enter your search below:</label>
+              <label for="search-input">Enter your search below:</label>
               <input
                 type="text"
                 class="form-control"
@@ -27,19 +27,20 @@
               />
             </div>
             <div class="form-group">
-              <label for="exampleFormControlSelect1">Select a format...</label>
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option>maps</option>
-                <option>audio recordings</option>
-                <option>photo, print, drawing</option>
-                <option>manuscripts/mixed material</option>
-                <option>newspapers</option>
-                <option>film, videos</option>
-                <option>printed music</option>
-                <option>archived websites</option>
+              <label for="formControl">Select a format...</label>
+              <select class="form-control" id="formControl">
+                <option value="select">Select an option...</option>
+                <option value="maps">maps</option>
+                <option value="audio">audio recordings</option>
+                <option value="photos">photo, print, drawing</option>
+                <option value="manuscripts">manuscripts/mixed material</option>
+                <option value="newspapers">newspapers</option>
+                <option value="film-and-videos">film, videos</option>
+                <option value="notated-music">printed music</option>
+                <option value="websites">archived websites</option>
               </select>
             </div>
-            <button type="button" id="search-btn" class="btn btn-dark">Click Me</button>
+            <button type="submit" id="search-btn" class="btn btn-dark">Click Me</button>
           </form>
         </div>
       </div>
